@@ -1,20 +1,22 @@
 package frc.robot;
 
-import com.ctre.phoenix.motorcontrol.can.TalonSRX;
-
 public final class Constants {
-  //public static class OperatorConstants {
-    // Controllers
-    public static final int kDriverControllerPort = 0;
 
-    // Drive Motor
-    public static final int FLDriveMotorPort = 0;
-    public static final int FRDriveMotorPort = 0;
-    public static final int BLDriveMotorPort = 0;
-    public static final int BRDriveMotorPort = 0;
+      //----------------------------------- Drive Motors -----------------------------------//
 
-    // Coral Shooting Motors
-    public static final int coralMotorPort = 2;
+      public static final int FLDriveMotorPort = 3;
+      public static final int FRDriveMotorPort = 1;
+      public static final int BLDriveMotorPort = 6;
+      public static final int BRDriveMotorPort = 10;
+  
+      //------------------------------ Coral Shooting Motors ------------------------------//
+      
+      public static final int coralMotorPort = 2;
+      public static final double shootingSpeedCoral = 0.3;
 
-  //}
+  
+  public static class OperatorConstants {
+      // Controllers
+      public static final int kDriverControllerPort = 0;
+  }
 }

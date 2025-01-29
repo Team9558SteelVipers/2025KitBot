@@ -4,14 +4,26 @@
 
 package frc.robot.subsystems;
 
+import com.ctre.phoenix.motorcontrol.ControlMode;
+import com.ctre.phoenix.motorcontrol.can.TalonSRX;
+
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
+import frc.robot.Constants;
 
 public class shootCoralSubsystem extends SubsystemBase {
-  /** Creates a new shootCoralSubsystem. */
-  public shootCoralSubsystem() {}
 
-  @Override
-  public void periodic() {
-    // This method will be called once per scheduler run
+    TalonSRX coralMotor = new TalonSRX(Constants.coralMotorPort);
+
+  public void shootCoral() {
+
+    coralMotor.set(ControlMode.PercentOutput, Constants.shootingSpeedCoral);
+    
   }
+
+  public void stopShotCoral() {
+
+    coralMotor.set(ControlMode.PercentOutput, 0);
+
+  }
+
 }
