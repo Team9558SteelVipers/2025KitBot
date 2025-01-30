@@ -3,16 +3,16 @@ package frc.robot.commands;
 import java.util.function.Supplier;
 
 import edu.wpi.first.wpilibj2.command.Command;
-import frc.robot.subsystems.driveSubsystem;
+import frc.robot.subsystems.DriveSubsystem;
 
-public class dynamicDriveCommand extends Command {
+public class DynamicDriveCommand extends Command {
 
-  private final driveSubsystem m_driveSubsystem;
+  private final DriveSubsystem m_driveSubsystem;
   
   Supplier <Double> leftspeed; 
   Supplier <Double> rightspeed; 
 
-  public dynamicDriveCommand(driveSubsystem subsystem, Supplier <Double> new_leftspeed , Supplier <Double> new_rightspeed) {
+  public DynamicDriveCommand(DriveSubsystem subsystem, Supplier <Double> new_leftspeed , Supplier <Double> new_rightspeed) {
     m_driveSubsystem = subsystem;
     new_leftspeed = leftspeed;
     new_rightspeed = rightspeed;

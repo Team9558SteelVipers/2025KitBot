@@ -10,7 +10,7 @@ import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants;
 
-public class shootCoralSubsystem extends SubsystemBase {
+public class ShootCoralSubsystem extends SubsystemBase {
 
     TalonSRX coralMotor = new TalonSRX(Constants.coralMotorPort);
 

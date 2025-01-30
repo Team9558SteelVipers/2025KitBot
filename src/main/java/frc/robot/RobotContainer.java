@@ -5,21 +5,21 @@
 package frc.robot;
 
 import frc.robot.Constants.OperatorConstants;
-import frc.robot.commands.dynamicDriveCommand;
-import frc.robot.commands.shootCoralCommand;
-import frc.robot.subsystems.driveSubsystem;
-import frc.robot.subsystems.shootCoralSubsystem;
+import frc.robot.commands.DynamicDriveCommand;
+import frc.robot.commands.ShootCoralCommand;
+import frc.robot.subsystems.DriveSubsystem;
+import frc.robot.subsystems.ShootCoralSubsystem;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 
 public class RobotContainer {
   
   private final CommandXboxController m_driverController = new CommandXboxController(OperatorConstants.kDriverControllerPort);
 
-  private final driveSubsystem m_driveSubsystem = new driveSubsystem();
-  private final shootCoralSubsystem m_shootCoralSubsystem = new shootCoralSubsystem();
+  private final DriveSubsystem m_driveSubsystem = new DriveSubsystem();
+  private final ShootCoralSubsystem m_shootCoralSubsystem = new ShootCoralSubsystem();
 
-  private final dynamicDriveCommand m_dynamicDriveCommand = new dynamicDriveCommand(m_driveSubsystem, m_driverController :: getRightY, m_driverController :: getLeftY);
-  private final shootCoralCommand m_shootCoralCommand = new shootCoralCommand(m_shootCoralSubsystem);
+  private final DynamicDriveCommand m_dynamicDriveCommand = new DynamicDriveCommand(m_driveSubsystem, m_driverController :: getRightY, m_driverController :: getLeftY);
+  private final ShootCoralCommand m_shootCoralCommand = new ShootCoralCommand(m_shootCoralSubsystem);
 
 
   public RobotContainer() {

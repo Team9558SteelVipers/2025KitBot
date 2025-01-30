@@ -4,16 +4,16 @@
 
 package frc.robot.commands;
 
-import frc.robot.subsystems.shootCoralSubsystem;
+import frc.robot.subsystems.ShootCoralSubsystem;
 
 import edu.wpi.first.wpilibj2.command.Command;
 
-public class shootCoralCommand extends Command {
+public class ShootCoralCommand extends Command {
   @SuppressWarnings({"PMD.UnusedPrivateField", "PMD.SingularField"})
 
-  private final shootCoralSubsystem m_shootCoralSubsystem;
+  private final ShootCoralSubsystem m_shootCoralSubsystem;
 
-  public shootCoralCommand(shootCoralSubsystem subsystem) {
+  public ShootCoralCommand(ShootCoralSubsystem subsystem) {
     m_shootCoralSubsystem = subsystem;
     addRequirements(subsystem);
   }
