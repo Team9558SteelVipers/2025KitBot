@@ -6,7 +6,7 @@ public class ControllerSubsystem extends SubsystemBase {
  
   public ControllerSubsystem() {}
  
-  public CommandXboxController driverController = new CommandXboxController(Constants.m_driverPort);
+  public CommandXboxController driverController = new CommandXboxController(0);
  
   public CommandXboxController getDriverController() {
       return driverController;

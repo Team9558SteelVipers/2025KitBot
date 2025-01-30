@@ -2,19 +2,21 @@ package frc.robot.subsystems;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants;
 import com.ctre.phoenix.motorcontrol.ControlMode;
-import com.ctre.phoenix.motorcontrol.can.BeemovieSPX;
+import edu.wpi.first.wpilibj.GenericHID;
+import edu.wpi.first.wpilibj.motorcontrol.Talon;
+
 public class main {
 public static class DriveTrainSubsystem extends SubsystemBase{
 
-    private TalonFX motorFR;
-    private TalonFX motorFL;
-    private TalonFX motorBR;
-    private TalonFX motorBL;
+    private static TalonSRX motorFR;
+    private static TalonSRX motorFL;
+    private static TalonSRX motorBR;
+    private static TalonSRX motorBL;
     public DriveTrainSubsystem() {
-        motorFR = new TalonFX(Constants.m_left1Port);
-        motorFL = new TalonFX(Constants.m_left14Port);
-        motorBR = new TalonFX(Constants.m_right0Port);
-        motorBL = new TalonFX(Constants.m_right15Port);
+        motorFR = new TalonSRX(Constants.m_left1Port);
+        motorFL = new TalonSRX(Constants.m_left14Port);
+        motorBR = new TalonSRX(Constants.m_right0Port);
+        motorBL = new TalonSRX(Constants.m_right15Port);
     }
    
     public void setSpeed(double leftpower, double rightpower){
