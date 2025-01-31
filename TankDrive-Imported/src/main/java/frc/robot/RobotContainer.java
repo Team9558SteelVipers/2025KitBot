@@ -23,14 +23,14 @@ import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 public class RobotContainer{
 // public CommandXboxController m_Tankcontroller = new CommandXboxController(0);
 
-  final TankSubsystem m_TankSubsystem = new TankSubsystem();
-  final ElevatorSubsystem m_ElevatorSubsystem = new ElevatorSubsystem();
-  final CoralSubsystem m_CoralSubsystem = new CoralSubsystem();
+  public TankSubsystem m_TankSubsystem = new TankSubsystem();
+  public ElevatorSubsystem m_ElevatorSubsystem = new ElevatorSubsystem();
+  public CoralSubsystem m_CoralSubsystem = new CoralSubsystem();
   public CommandXboxController tankmoverController = new CommandXboxController(0);
-  final ButtonCommand m_TankCommander = new ButtonCommand(m_TankSubsystem, tankmoverController);
-    ButtonCommand m_ButtonCommandUP = new ButtonCommand(m_ElevatorSubsystem, 1.0);
-    ButtonCommand m_ButtonCommandDOWN = new ButtonCommand(m_ElevatorSubsystem, -1.0);
-    ButtonCommand m_CoralOuttake = new ButtonCommand(m_CoralSubsystem);
+  public ButtonCommand m_TankCommander = new ButtonCommand(m_TankSubsystem, tankmoverController :: getRightY, tankmoverController :: getLeftY);
+    // ButtonCommand m_ButtonCommandUP = new ButtonCommand(m_ElevatorSubsystem, 1.0);
+    // ButtonCommand m_ButtonCommandDOWN = new ButtonCommand(m_ElevatorSubsystem, -1.0);
+    // ButtonCommand m_CoralOuttake = new ButtonCommand(m_CoralSubsystem);
 
 
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
@@ -42,9 +42,9 @@ public class RobotContainer{
 
   private void configureBindings() {
     
-    tankmoverController.a().whileTrue(m_CoralOuttake);
-    tankmoverController.rightTrigger().whileTrue(m_ButtonCommandUP);
-    tankmoverController.leftTrigger().whileTrue(m_ButtonCommandDOWN);
+    // tankmoverController.a().whileTrue(m_CoralOuttake);
+    // tankmoverController.rightTrigger().whileTrue(m_ButtonCommandUP);
+    // tankmoverController.leftTrigger().whileTrue(m_ButtonCommandDOWN);
     m_TankSubsystem.setDefaultCommand(m_TankCommander);
   }
 }
